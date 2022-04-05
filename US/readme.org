@@ -1,0 +1,36 @@
+This uses the file PVIdata.csv and some data from 538.
+* Census.gov
+
+** co-est2019-alldata.csv
+  Doesn't like Safari, I used Chrome to download.
+
+  https://www.census.gov/data/datasets/time-series/demo/popest/2010s-counties-total.html#par_textimage_70769902
+
+  co-est2019-alldata.csv
+
+  Again, another awful format which needs lots of cleanup.
+
+** Using ers.usda.gov
+   https://www.ers.usda.gov/data-products/county-level-data-sets/download-data/
+   chose Last in list: https://www.ers.usda.gov/webdocs/DataFiles/48747/PopulationEstimates.xlsx?v=7350.7
+
+   this is the ungainly column names of 
+
+#+BEGIN_SRC R
+
+  colnames(data)
+  [1] "FIPStxt"                         "State"                          
+  [3] "Area name"                       "Rural-urban continuum code 2013"
+  [5] "Attribute"                       "Value"                          
+  > 
+
+#+END_SRC
+
+Where 'State' is the two letter postal code, 'Area Name' is either the
+state repeated (signifying that it's a total) or the country with the
+word 'County' appended (like we couldn't fucking figure that one out);
+the 'Attribute' is the string 'Population YYYY' (instead of just
+having a column named 'Year') and 'Value' which is just the population
+(so, naming the column 'population' was too much of a stretch)
+
+
