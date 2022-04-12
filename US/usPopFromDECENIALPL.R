@@ -1,15 +1,19 @@
-# This file is comprehensive, dividing populations by racial statistics into
+#
+# Not very useful for my purposes in covid19 work
+#
+# # This file is comprehensive, dividing populations by racial statistics into
 # those that categorize themselves as being in 1, 2, 3, 4, or 5 races for each
 # state. The rows are the individual sub-categories within each broad category
 # (i.e. within those that say they're one race, 'white','black','hispanic' and
 # so on, within those that say they're two, 'white and black or African
 # America', and so on). Might be interesting later on, but not so useful now.
+#
 
 # parsing the 2020 data from https://data.census.gov/cedsci/table?q=population%202020
 library(tidyverse)
 library(ggplot2)
 file="./US/DECENNIALPL2020.P1-2021-12-09T152828-fromExcel.csv"
-usPop2020=read_csv(file)
+usPop2020=read_csv(file,show_col_types = FALSE)
 # when I read this file, I get the following message
 # > file=".//DECENNIALPL2020.P1-2021-12-09T152828-fromExcel.csv"
 # > usPop2020=read_csv(file)

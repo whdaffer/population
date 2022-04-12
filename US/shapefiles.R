@@ -1,4 +1,5 @@
 # Working with shapefiles
+# Having done anything with this. 
 # https://datacarpentry.org/r-raster-vector-geospatial/06-vector-open-shapefile-in-r/
 #
 # Needed to install udunits2 and gdal.
